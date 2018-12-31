@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Firas Chouchen Hamila</title>
+  <!-- Basic -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0">
+
+  <!-- Site Metas -->
+  <title>Food Funday Restaurant - One page HTML Responsive</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Site Icons -->
+  <link rel="shortcut icon" href="images/icon.jpg" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- Site CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Responsive CSS -->
+  <link rel="stylesheet" href="css/responsive.css">
+  <!-- color -->
+  <link id="changeable-colors" rel="stylesheet" href="css/colors/orange.css" />
+  <link rel="stylesheet" href="css/style_reservation.css">
+  <link rel="stylesheet" href="css/datePicker.css" type="text/css">
+
+  <!-- Modernizer -->
+  <script src="js/modernizer.js"></script>
+
+
+
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+  <div id="loader">
+    <div id="status"></div>
+  </div>
+  <header>
+    <div class="logo_reservation">
+      <a class="navbar-brand js-scroll-trigger logo-header" href="index.html">
+        <img src="images/logo.png" alt="">
+      </a>
+    </div>
+    <div class="wow fadeIn" data-wow-duration="1s" data-wow-delay="0.1s">
+      <h2 class="block-title"> Reserver Votre Table </h2>
+    </div>
+  </header>
+  <div id="about" class="about-main pad-top-30 ">
+    <div class="container">
+      <div class="container pr">
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+          <form id="form1" name="form1" method="post" action="">
+            <p class="block-title nombre">Table pour combien de personnes ?</p>
+            <select name="nbp" id="nbp">
+              <option value="-1">--Veuillez choisir---</option>
+              <option value="1">Une place</option>
+              <option value="2">Deux places</option>
+              <option value="4">4 places</option>
+              <option value="6">6 places</option>
+            </select>
+            <br />
+            <div id="chaises">
+            </div>
+
+            <br />
+            <p class="block-title nombre"> A quelle date vous allez venir ? </p>
+            <label for="start" class="sous-title">Jour :</label>
+
+            <input class="reser" type="date" id="start" name="trip-start" min="2018-01-01" max="2020-12-31">
+            <br />
+            <label class="sous-title" for="appt">Heur :</label>
+
+            <input class="reser" type="time" id="appt" name="appt" value="9:00" min="9:00" max="18:00" required>
+
+            <span class="note">(notre restaurant est ouvert 24/24h)</span>
+
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+          <h2 class="block-title nombre">Vos coordon&eacute;es :</h2>
+          <span class="sous-title"> Civilit&eacute; : </span> </br>
+          <input class="dora" name="civilite" type="radio" value="mme" />
+          <span class="mmm">Madamme</span>
+          <input class=" dora" name="civilite" type="radio" value="mlle" />
+          <span class="mmm">Mademoiselle</span>
+          <input class="dora" name="civilite" type="radio" value="m" />
+          <span class="nnn">Monsieur</span>
+          <br />
+          <span class="sous-title"> Nom et pr&eacute;nom : </span>
+          <input name="nom" type="text" id="nom" size="60" />
+
+          <br />
+          <span class="sous-title"> N&deg; de t&eacute;l&eacute;phone : </span>
+          <input name="tel" type="text" id="tel" size="60" />
+          <br />
+          <div class="block-title nombre" id="div_accompagnateurs">Liste des accompagnateurs (une personne
+            par ligne):
+            <br />
+            <textarea name="accompagnateurs" cols="46" rows="3" id="accompagnateurs"></textarea>
+            <br />
+          </div>
+        </div>
+      </div>
+
+
+      <hr />
+
+
+
+
+      <div class="rows">
+        <div class="col-md-7">
+          <h2 class="block-title nombre" style="text-align: center">Que voulez-vous manger ? </h2>
+          <ul>
+            <div class="rows">
+              <div class="col-md-4 col-sm-6 col-xs-12">
+                <li>
+                  <input id="myCheckbox1" name="cmd" type="checkbox" value="Salade" data-prix="5" />
+                  <label class="check" for="myCheckbox1">
+
+                    <div class="item item-type-zoom1">
+                      <a class="item-hover">
+                        <div class="item-info">
+                          <div class="headline">
+                            Salade 5DT
+                            <div class="line"></div>
+
+                          </div>
+                        </div>
+                      </a>
+                      <div class="item-img">
+                        <img class="image-responsive ima " src="images/salade.jpg" alt="sp-menu">
+                      </div>
+                    </div>
+                  </label>
+                </li>
+              </div>
+
+              <div class="col-md-4 col-sm-6 col-xs-12">
+                <li>
+
+                  <input name="cmd" id="myCheckbox2" type="checkbox" value="Soupe" data-prix="2.5" />
+                  <label class="check" for="myCheckbox2">
+
+                    <div class="item item-type-zoom1">
+                      <a class="item-hover">
+                        <div class="item-info">
+                          <div class="headline">
+                            Soupe 2.5DT
+                            <div class="line"></div>
+
+                          </div>
+                        </div>
+                      </a>
+                      <div class="item-img">
+
+                        <img class="image-responsive ima" src="images/soupe.jpg" alt="sp-menu">
+                      </div>
+                    </div>
+                  </label>
+                </li>
+              </div>
+              <div class="col-md-4 col-sm-6 col-xs-12">
+                <li>
+
+                  <input name="cmd" id="myCheckbox3" type="checkbox" value="Riz" data-prix="12" />
+                  <label class="check" for="myCheckbox3">
+
+                    <div class="item item-type-zoom1">
+                      <a class="item-hover">
+                        <div class="item-info">
+                          <div class="headline">
+                            <center>Riz 12DT</center>
+                            <div class="line"></div>
+
+                          </div>
+                        </div>
+                      </a>
+                      <div class="item-img">
+                        <img class="image-responsive ima" src="images/riz.jpg" alt="sp-menu">
+                      </div>
+                    </div>
+                  </label>
+                </li>
+              </div>
+            </div>
+            <div class="rows">
+              <div class="col-md-4 col-sm-6 col-xs-12">
+                <li>
+                  <div>
+                  </div>
+                  <input name="cmd" id="myCheckbox4" type="checkbox" value="Couscous" data-prix="15.5" />
+                  <label class="check" for="myCheckbox4">
+
+                    <div class="item item-type-zoom1">
+                      <a class="item-hover">
+                        <div class="item-info">
+                          <div class="headline">
+                            Couscous 15.5DT
+                            <div class="line"></div>
+
+                          </div>
+                        </div>
+                      </a>
+                      <div class="item-img">
+                        <img class="image-responsive ima" src="images/couscous.jpg" alt="sp-menu">
+                      </div>
+                    </div>
+
+                  </label>
+                </li>
+              </div>
+              <div class="col-md-4 col-sm-6 col-xs-12">
+                <li>
+
+                  <input name="cmd" id="myCheckbox5" type="checkbox" value="Fruits" data-prix="7" />
+                  <label class="check" for="myCheckbox5">
+
+                    <div class="item item-type-zoom1">
+                      <a class="item-hover">
+                        <div class="item-info">
+                          <div class="headline">
+                            Fruits 7DT
+                            <div class="line"></div>
+
+                          </div>
+                        </div>
+                      </a>
+                      <div class="item-img">
+                        <img class="image-responsive ima" src="images/fruits.jpg" alt="sp-menu">
+                      </div>
+                    </div>
+                  </label>
+                </li>
+              </div>
+
+
+
+              <div class="col-md-4 col-sm-6 col-xs-12">
+                <li>
+
+                  <input name="cmd" id="myCheckbox6" type="checkbox" value="Gateaux" data-prix="6.4" />
+                  <label class="check" for="myCheckbox6">
+
+                    <div class="item item-type-zoom1">
+                      <a class="item-hover">
+                        <div class="item-info">
+                          <div class="headline">
+                            Gateaux 6.4DT
+                            <div class="line"></div>
+
+                          </div>
+                        </div>
+                      </a>
+                      <div class="item-img">
+                        <img class="image-responsive ima" src="images/gateaux.jpg" alt="sp-menu">
+                  </label>
+                </li>
+              </div>
+
+            </div>
+
+
+
+          </ul>
+
+
+        </div>
+
+        <div class="col-md-5">
+          <br>
+          <br>
+          <div id="ticket-bottom" class="hidden">
+            <widget type="ticket" class="--flex-column">
+
+              <div class="tourname">
+                <div class="deetz --flex-row-j!sb">
+                  <div class="event --flex-column">
+                    <div id="div_resume" class="div_resume">
+
+                    </div>
+                  </div>
+
+
+
+                </div>
+                <center><small>****bonne Appetit****</small></center>
+
+              </div>
+              <div class="rip"></div>
+              <div class="bottom --flex-row-j!sb">
+                <div class="barcode">
+                  <input type="button" value="Imprimer" id="btnPrint" class="bouton7 hidden" />
+                </div>
+                <br>
+
+              </div>
+              <br>
+              </center>
+            </widget>
+          </div>
+          <p>&nbsp;</p>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+      <div class="rows">
+        <div class="col-md-4 col-md-offset-4   col-sm-offset-4 col-xs-4 col-sm-4 col-lg-4">
+          <input name="b1" type="button" class="bouton6" id="b1" value="Valider ma commande" />
+
+        </div>
+      </div>
+
+
+
+
+
+
+      </form>
+
+
+    </div>
+  </div>
+  <!-- end col -->
+
+  <div id="footer" class="footer-main">
+
+    <!-- end footer-news -->
+
+    <!-- end footer-box-c -->
+  </div>
+
+  <!-- end footer-in-main -->
+  </div>
+  <!-- end row -->
+  </div>
+  <!-- end container -->
+  <div id="copyright" class="copyright-main">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <h6 class="copy-title"> Copyright &copy;Tous droits réservés. | <a href="https://themewagon.com/" target="_blank">Food
+              Firas</a> </h6>
+        </div>
+      </div>
+      <!-- end row -->
+    </div>
+    <!-- end container -->
+  </div>
+  <!-- end copyright-main -->
+
+  <!-- end footer-main -->
+
+  <a href="#" class="scrollup" style="display: none;">Scroll</a>
+
+  <section id="color-panel" class="close-color-panel">
+    <a class="panel-button gray2"><i class="fa fa-cog fa-spin fa-2x"></i></a>
+    <!-- Colors -->
+    <div class="segment">
+      <h4 class="gray2 normal no-padding">Color Scheme</h4>
+      <a title="orange" class="switcher orange-bg"></a>
+      <a title="strong-blue" class="switcher strong-blue-bg"></a>
+      <a title="moderate-green" class="switcher moderate-green-bg"></a>
+      <a title="vivid-yellow" class="switcher vivid-yellow-bg"></a>
+    </div>
+  </section>
+
+</body>
+
+<!-- ALL JS FILES -->
+<script src="js/all.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<!-- ALL PLUGINS -->
+<script src="js/custom.js"></script>
+<script src="js/jquery.js"></script>
+<script src="js/util.js"></script>
+<script src="js/datePicker.js"></script>
+
+</html>
